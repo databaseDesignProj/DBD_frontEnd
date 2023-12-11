@@ -91,6 +91,9 @@
             flex-direction: column;
             align-items: center;
             padding: 20px;
+            margin: 20px;
+            background-color: #FFF;
+
         }
 
         #cart-items {
@@ -203,6 +206,11 @@
             border-radius: 4px;
             padding: 8px 12px;
         }
+
+        #cart-wrap {
+            border-radius: 1.25rem;
+            background: #FEF9F3;
+        }
     </style>
 </head>
 
@@ -230,38 +238,40 @@
         </div>
     </header>
 
-    <main>
-        <h1>장바구니</h1>
-        <div id="cart-items">
-            <div class="cart-item">
-                <img src="public/images/greentea.png" alt="음료 이미지">
-                <div class="cart-item-details">
-                    <h3>그린티 프라푸치노</h3>
-                    <p>가격: 6,300 원</p>
+    <div id="cart-wrap">
+        <main>
+            <h1>장바구니</h1>
+            <div id="cart-items">
+                <div class="cart-item">
+                    <img src="public/images/greentea.png" alt="음료 이미지">
+                    <div class="cart-item-details">
+                        <h3>그린티 프라푸치노</h3>
+                        <p>가격: 6,300 원</p>
+                    </div>
+                    <div class="cart-item-quantity">
+                        <input type="number" class="quantity-input" value="1" min="1">
+                        <button class="update-quantity">Update</button>
+                    </div>
+                    <div class="cart-item-total">6,300 원</div>
+                    <button class="remove-item">X</button>
                 </div>
-                <div class="cart-item-quantity">
-                    <input type="number" class="quantity-input" value="1" min="1">
-                    <button class="update-quantity">Update</button>
+                <div class="cart-item">
+                    <img src="public/images/caremel.png" alt="음료 이미지">
+                    <div class="cart-item-details">
+                        <h3>카라멜 프라푸치노</h3>
+                        <p>가격: 6,600 원</p>
+                    </div>
+                    <div class="cart-item-quantity">
+                        <input type="number" class="quantity-input" value="1" min="1">
+                        <button class="update-quantity">Update</button>
+                    </div>
+                    <div class="cart-item-total">6,800 원</div>
+                    <button class="remove-item">X</button>
                 </div>
-                <div class="cart-item-total">6,300 원</div>
-                <button class="remove-item">X</button>
             </div>
-            <div class="cart-item">
-                <img src="public/images/caremel.png" alt="음료 이미지">
-                <div class="cart-item-details">
-                    <h3>카라멜 프라푸치노</h3>
-                    <p>가격: 6,600 원</p>
-                </div>
-                <div class="cart-item-quantity">
-                    <input type="number" class="quantity-input" value="1" min="1">
-                    <button class="update-quantity">Update</button>
-                </div>
-                <div class="cart-item-total">6,800 원</div>
-                <button class="remove-item">X</button>
-            </div>
-        </div>
-        <div id="order-button">주문 하기</div>
-    </main>
+            <div id="order-button">주문 하기</div>
+        </main>
+    </div>
 
     <div id="popup">
         <p>삭제되었습니다.</p>
@@ -341,19 +351,19 @@
             const orderButton = document.getElementById('user-info-btn');
 
             orderButton.addEventListener('click', function () {
-                const destinationURL = '주문완료페이지의URL';
+                const destinationURL = 'My-info.html';
                 window.location.href = destinationURL;
             });
         });
 
-        document.addEventListener('DOMContentLoaded', function () {
-            const orderButton = document.getElementById('order-button');
+        // document.addEventListener('DOMContentLoaded', function () {
+        //     const orderButton = document.getElementById('order-button');
 
-            orderButton.addEventListener('click', function () {
-                const destinationURL = '#';
-                window.location.href = destinationURL;
-            });
-        });
+        //     orderButton.addEventListener('click', function () {
+        //         const destinationURL = 'My-info.html';
+        //         window.location.href = destinationURL;
+        //     });
+        // });
     </script>
 
 </body>

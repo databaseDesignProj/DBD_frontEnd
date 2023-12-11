@@ -89,14 +89,11 @@
     <div id="signup-container">Welcome<br>Hansung Cafe Service</div>
     <script>
         function validateLogin() {
-            var username = document.getElementById("username").value;
-            var password = document.getElementById("password").value;
+            // 아무 값이나 입력하더라도 로그인 성공으로 처리
+            console.log("로그인 성공");
 
-            if (username === "사용자명" && password === "비밀번호") {
-                console.log("로그인 성공");
-            } else {
-                console.log("로그인 실패");
-            }
+            // 로그인 성공 시 페이지 이동
+            window.location.href = "CafeList.html";
         }
 
         function goToSignupPage() {
