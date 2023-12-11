@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            display: flex;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+        }
+
+        #logo {
+            margin-left: 2rem;
+        }
+
+        nav {
+            margin-left: auto;
+            display: flex;
+            gap: 3rem;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: #6D6D6D;
+            text-decoration: none;
+        }
+
+        #search-container {
+            display: flex;
+            align-items: center;
+            margin: 10px;
+        }
+
+        #search-box {
+            margin-left: 2rem;
+            padding: 8px;
+            border-radius: 4px;
+            margin-right: 5px;
+            border: 0.5px solid #6D6D6D;
+        }
+
+        #search-btn {
+            background-color: #1E5092;
+            color: #fff;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #user-info-btn,
+        #cart-btn {
+            background-color: #fff;
+            padding: 8px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        #user-info-btn img,
+        #cart-btn img {
+            margin-right: 5px;
+        }
+
+        #cart-btn {
+            margin-left: 10px;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        section {
+            display: flex;
+            padding: 20px;
+            /* 박스의 패딩값 조절 */
+        }
+        section > * {
+            flex: 1;
+            margin-right: 10px; /* 각 아이템 사이의 여백 조절 */
+        }
+
+        section > *:last-child {
+            margin-right: 0; /* 마지막 아이템에는 여백을 주지 않음 */
+        }
+
+        section button {
+            background-color: #1E5092;
+            color: #fff;
+            padding: 8px 50px;
+            border: none;
+            border-radius: 50%; /* 버튼을 원 모양으로 만들기 */
+            cursor: pointer;
+            width: fit-content;
+            overflow: hidden; /* 버튼 내용이 너무 길 경우 오버플로우 방지 */
+        }
+
+        #add_btn, #buy_btn {
+        background-color: #1E5092;
+        width: 100px;
+        color: #fff;
+        padding: 8px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        }
+
+        section img {
+            max-width: 100%;
+            /* 이미지가 부모 너비에 맞도록 */
+            margin-right: 20px;
+            /* 이미지와 텍스트 간격 조절 */
+        }
+
+        section span {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        section p {
+            margin: 0;
+            margin-bottom: 10px;
+            /* 단락간 간격 조절 */
+        }
+        
+        #detail-wrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 1.25rem;
+            background: #FEF9F3;;
+            padding: 10px;
+            width: 80%;
+            margin-bottom: 20px;
+        }
+
+        #detail-container {
+            border-radius: 0.5rem;
+            background: #FFF;
+            width: 80%;
+            margin: 10px;
+        }
+
+        #detail-container-little{
+            border-radius: 0.5rem;
+            background: #c7c3c3;
+            width: 85%;
+            margin: 30px;
+        }
+    </style>
+</head>
+<body>
+      <!--이것도 버튼 누르면 페이지만 바꾸게 구현해놨습니다. 실제로 데이터 넘어가는 로직은 아직 안했습니다. 이미지 파일들도 아직 따로 추가하지 않았습니다
+     카트추가나 구매 함수도 걍 페이지만 넘어가게 일단 해놨습니다-->
+    <header>
+        <img src="public/images/logo2.png" alt="Your Cafe Logo" id="logo">
+
+        <nav>
+            <a href="#">Category</a>
+            <a href="#">Menu</a>
+            <a href="#">About Us</a>
+        </nav>
+
+        <label id="search-container">
+            <input type="text" placeholder="Search..." id="search-box">
+            <button id="search-btn"><img src="public/images/carbon-search.svg"></button>
+        </label>
+
+        <div>
+            <button id="user-info-btn"><img src="public/images/my-info-img.png">홍길동</button>
+        </div>
+        <div>
+            <button id="cart-btn"><img src="public/images/grommet-icons-shop.svg"></button>
+        </div>
+    </header>
+
+    <div id="detail-wrap">
+        <div id="detail-container">
+            <div id="detail-container-little">
+            <section>
+                    <span>
+                        <img src="public/images/big_Size_GreenTeaF.png"></img>
+                        <h1>그린티 프라푸치노</h1>
+                        <button id="add_btn" onclick="addToCart('그린티 프라푸치노')">Add Cart</button>
+                        <button id="buy_btn" onclick="buyNow('그린티 프라푸치노')">Buy</button>
+                        <h3>Green Tea Frappuccino</h3>
+                    </span>
+                    <span>
+                        <h1>제품 영양 정보:</h4>
+                        <h4>당류 : 28g</h4>
+                        <h4>단백질 : 5g</h4>
+                        <h4>나트륨 : 150mg</h4>
+                        <h4>카페인 : 60mg</h4>
+                        <h4>총 칼로리 : 230kcal</h4>
+                    </span>
+                </section>           
+             </div>  
+        </div>
+    </div>
+
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', function () {
+            const orderButton = document.getElementById('cart-btn');
+
+            orderButton.addEventListener('click', function () {
+                const destinationURL = 'ShoppingCart.html';
+                window.location.href = destinationURL;
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const orderButton = document.getElementById('user-info-btn');
+
+            orderButton.addEventListener('click', function () {
+                const destinationURL = 'My-info.html';
+                window.location.href = destinationURL;
+            });
+        });
+
+        function goToDetail(MenuName) {
+    let destinationURL;
+
+    // 카테고리 값에 따라 다른 윈도우로 이동
+   
+    window.location.href = destinationURL;
+}
+        function addToCart(menuName) {
+            alert(menuName + ' 가 장바구니에 추가되었습니다');
+            const destinationURL = 'ShoppingCart.html';
+            window.location.href = destinationURL;
+            // 일단 그냥 알림 뜨고 장바구니로 화면만 넘어가게 해놓았습니다.
+        }
+
+       function buyNow(menuName) {
+            alert('구매신청 ' + menuName);
+            const destinationURL = 'My-info.html';
+            window.location.href = destinationURL;
+            // 일단 그냥 알림 뜨고 구매페이지? 로 화면만 넘어가게 해놓았습니다.
+       }
+    </script>
+
+</body>
+
+</html>

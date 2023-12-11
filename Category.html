@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Category</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            display: flex;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+        }
+
+        #logo {
+            margin-left: 2rem;
+        }
+
+        nav {
+            margin-left: auto;
+            display: flex;
+            gap: 3rem;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: #6D6D6D;
+            text-decoration: none;
+        }
+
+        #search-container {
+            display: flex;
+            align-items: center;
+            margin: 10px;
+        }
+
+        #search-box {
+            margin-left: 2rem;
+            padding: 8px;
+            border-radius: 4px;
+            margin-right: 5px;
+            border: 0.5px solid #6D6D6D;
+        }
+
+        #search-btn {
+            background-color: #1E5092;
+            color: #fff;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #user-info-btn,
+        #cart-btn {
+            background-color: #fff;
+            padding: 8px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        #user-info-btn img,
+        #cart-btn img {
+            margin-right: 5px;
+        }
+
+        #cart-btn {
+            margin-left: 10px;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        section {
+            display: flex;
+            padding: 20px;
+            /* 박스의 패딩값 조절 */
+        }
+
+        section button {
+            background-color: #1E5092;
+            color: #fff;
+            padding: 8px 50px;
+            border: none;
+            border-radius: 50%; /* 버튼을 원 모양으로 만들기 */
+            cursor: pointer;
+            width: fit-content;
+            overflow: hidden; /* 버튼 내용이 너무 길 경우 오버플로우 방지 */
+        }
+
+        section img {
+            max-width: 100%;
+            /* 이미지가 부모 너비에 맞도록 */
+            margin-right: 20px;
+            /* 이미지와 텍스트 간격 조절 */
+        }
+
+        section span {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        section p {
+            margin: 0;
+            margin-bottom: 10px;
+            /* 단락간 간격 조절 */
+        }
+        
+        #category-wrap {
+            border-radius: 1.25rem;
+            background: #FEF9F3;;
+            padding: 10px;
+            width: 60%;
+            margin-bottom: 20px;
+        }
+
+        #category-container {
+            border-radius: 0.5rem;
+            background: #FFF;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+       <!--이미지 파일은 아직 따로 넣진 않았습니다. 동그란 이미지 버튼 클릭하면 각 카테고리로 넘어가게 해놨는데 프라푸치노만 해놨습니다. 
+           제가 프라푸치노가 어느 코너에 속하는지 몰라서 일단 스무디 & 프라페로 해놨는데 커피면 말씀해주세여 수정하겠습니다-->
+    <header>
+        <img src="public/images/logo2.png" alt="Your Cafe Logo" id="logo">
+
+        <nav>
+            <a href="#">Category</a>
+            <a href="#">Menu</a>
+            <a href="#">About Us</a>
+        </nav>
+
+        <label id="search-container">
+            <input type="text" placeholder="Search..." id="search-box">
+            <button id="search-btn"><img src="public/images/carbon-search.svg"></button>
+        </label>
+
+        <div>
+            <button id="user-info-btn"><img src="public/images/my-info-img.png">홍길동</button>
+        </div>
+        <div>
+            <button id="cart-btn"><img src="public/images/grommet-icons-shop.svg"></button>
+        </div>
+    </header>
+
+    <div id="category-wrap">
+        <div id="category-container">
+            <section>
+                <button onclick="goToMenu('커피')"><img src="public/images/plaza-1.png"></button>
+                    <span>
+                        <h1>커피</h1>
+                    </span>
+            </section>
+        </div>
+        <div id="category-container">
+            <section>
+                <button onclick="goToMenu('에이드')"><img src="public/images/plaza-2.png"></button>
+                    <span>
+                        <h1>티 & 에이드</h1>
+                    </span>
+            </section>
+        </div>
+        <div id="category-container">
+            <section>
+                <button onclick="goToMenu('라떼')"><img src="public/images/plaza-3.png"></button>
+                    <span>
+                        <h1>라떼</h1>
+                    </span>
+            </section>
+        </div>
+        <div id="category-container">
+            <section>
+                <button onclick="goToMenu('프라페')"><img src="public/images/plaza-3.png"></button>
+                    <span>
+                        <h1>스무디 & 프라페</h1>
+                    </span>
+            </section>
+        </div>
+        <div id="category-container">
+            <section>
+                <button onclick="goToMenu('디카페인')"><img src="public/images/plaza-3.png"></button>
+                    <span>
+                        <h1>디카페인</h1>
+                    </span>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', function () {
+            const orderButton = document.getElementById('cart-btn');
+
+            orderButton.addEventListener('click', function () {
+                const destinationURL = 'ShoppingCart.html';
+                window.location.href = destinationURL;
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const orderButton = document.getElementById('user-info-btn');
+
+            orderButton.addEventListener('click', function () {
+                const destinationURL = 'My-info.html';
+                window.location.href = destinationURL;
+            });
+        });
+
+        function goToMenu(category) {
+            let destinationURL;
+            // category 값에 따라 다른 윈도우로 이동
+            switch (category) {
+                case '커피':
+                    destinationURL = 'Menu_Coffee.html';
+                    break;
+                case '에이드':
+                    destinationURL = 'Menu_Ade.html';
+                    break;
+                case '라떼':
+                    destinationURL = 'Menu_Latte.html';
+                    break;
+                case '프라페':
+                    destinationURL = 'Menu_Frappuccino.html';  // 아직은 이것만 됨
+                    break;
+                case '디카페인':
+                    destinationURL = 'Menu_Decaffein.html';
+                    break;
+                default:
+                    break;
+            }
+            window.location.href = destinationURL;
+        }
+    </script>
+
+</body>
+
+</html>
