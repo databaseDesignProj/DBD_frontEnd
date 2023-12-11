@@ -205,6 +205,27 @@
         </div>
     </div>
 
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', function () {
+            const orderButton = document.getElementById('cart-btn');
+
+            orderButton.addEventListener('click', function () {
+                const destinationURL = 'ShoppingCart.html';
+                window.location.href = destinationURL;
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const orderButton = document.getElementById('user-info-btn');
+
+            orderButton.addEventListener('click', function () {
+                const destinationURL = 'My-info.html';
+                window.location.href = destinationURL;
+            });
+        });
+    </script>
+
 </body>
 
 </html>
