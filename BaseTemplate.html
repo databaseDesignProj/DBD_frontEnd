@@ -24,11 +24,13 @@
         }
 
         #logo {
+            margin-left: 2rem;
         }
 
         nav {
+            margin-left: auto;
             display: flex;
-            gap: 5rem;
+            gap: 3rem;
             justify-content: space-around;
             align-items: center;
             padding: 10px;
@@ -39,22 +41,49 @@
             text-decoration: none;
         }
 
-        #search-box {
+        #search-container {
+            display: flex;
+            align-items: center;
             margin: 10px;
-            padding: 8px;
-            border: none;
-            border-radius: 4px;
         }
 
-        #user-info-btn,
-        #cart-btn {
+        #search-box {
+            margin-left: 2rem;
+            padding: 8px;
+            border-radius: 4px;
+            margin-right: 5px;
+            border: 0.5px solid #6D6D6D;
+        }
+
+        #search-btn {
             background-color: #1E5092;
             color: #fff;
             padding: 8px 12px;
             border: none;
             border-radius: 4px;
             cursor: pointer;
+        }
+
+        #user-info-btn,
+        #cart-btn {
+            background-color: #fff;
+            padding: 8px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
             margin: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        #user-info-btn img,
+        #cart-btn img {
+            margin-right: 5px;
+        }
+
+        #cart-btn {
+            margin-left: 10px;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
         }
 
         main {
@@ -76,11 +105,16 @@
             <a href="#">About Us</a>
         </nav>
 
-        <input type="text" placeholder="Search..." id="search-box">
+        <label id="search-container">
+            <input type="text" placeholder="Search..." id="search-box">
+            <button id="search-btn"><img src="public/images/carbon-search.svg"></button>
+        </label>
 
         <div>
-            <button id="user-info-btn">My Info</button>
-            <button id="cart-btn">Cart</button>
+            <button id="user-info-btn"><img src="public/images/my-info-img.png">홍길동</button>
+        </div>
+        <div>
+            <button id="cart-btn"><img src="public/images/grommet-icons-shop.svg"></button>
         </div>
     </header>
 
