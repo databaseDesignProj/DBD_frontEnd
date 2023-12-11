@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cafe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            display: flex;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+        }
+
+        #logo {
+            margin-left: 2rem;
+        }
+
+        nav {
+            margin-left: auto;
+            display: flex;
+            gap: 3rem;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: #6D6D6D;
+            text-decoration: none;
+        }
+
+        #search-container {
+            display: flex;
+            align-items: center;
+            margin: 10px;
+        }
+
+        #search-box {
+            margin-left: 2rem;
+            padding: 8px;
+            border-radius: 4px;
+            margin-right: 5px;
+            border: 0.5px solid #6D6D6D;
+        }
+
+        #search-btn {
+            background-color: #1E5092;
+            color: #fff;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #user-info-btn,
+        #cart-btn {
+            background-color: #fff;
+            padding: 8px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        #user-info-btn img,
+        #cart-btn img {
+            margin-right: 5px;
+        }
+
+        #cart-btn {
+            margin-left: 10px;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        section {
+            display: flex;
+            padding: 20px;
+            /* 박스의 패딩값 조절 */
+        }
+
+        section img {
+            max-width: 100%;
+            /* 이미지가 부모 너비에 맞도록 */
+            margin-right: 20px;
+            /* 이미지와 텍스트 간격 조절 */
+        }
+
+        section span {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        section p {
+            margin: 0;
+            margin-bottom: 10px;
+            /* 단락간 간격 조절 */
+        }
+
+        section button {
+            background-color: #1E5092;
+            color: #fff;
+            padding: 8px 50px;
+            /* 수정된 부분: 패딩값 조절 */
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: fit-content; /* 수정된 부분: 자식 요소의 너비를 내용에 맞게 설정 */
+        }
+
+
+        #cafe-wrap {
+            border-radius: 1.25rem;
+            background: #FEF9F3;;
+            padding: 10px;
+            width: 80%;
+            margin-bottom: 20px;
+        }
+
+        #cafe-contaienr {
+            border-radius: 0.5rem;
+            background: #FFF;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="public/images/logo2.png" alt="Your Cafe Logo" id="logo">
+
+        <nav>
+            <a href="#">Category</a>
+            <a href="#">Menu</a>
+            <a href="#">About Us</a>
+        </nav>
+
+        <label id="search-container">
+            <input type="text" placeholder="Search..." id="search-box">
+            <button id="search-btn"><img src="public/images/carbon-search.svg"></button>
+        </label>
+
+        <div>
+            <button id="user-info-btn"><img src="public/images/my-info-img.png">홍길동</button>
+        </div>
+        <div>
+            <button id="cart-btn"><img src="public/images/grommet-icons-shop.svg"></button>
+        </div>
+    </header>
+
+    <div id="cafe-wrap">
+        <div id="cafe-contaienr">
+            <section>
+                <img src="public/images/plaza-1.png">
+                <span>
+                    <h1>팥고당</h1>
+                    <p>서울 성북구 삼선교로16길 상상관 2층(팥고당)</p>
+                    <p>Tel : (02) 7600000 | OPEN : 08:00 ~ 20:00 CLOSE</p>
+                    <button>메뉴 보기</button>
+                </span>
+            </section>
+        </div>
+        <div id="cafe-contaienr">
+            <section>
+                <img src="public/images/plaza-2.png">
+                <span>
+                    <h1>Grazie caffee & Bakery</h1>
+                    <p>서울 성북구 삼선교로16길 미래관 B1층</p>
+                    <p>Tel : (02) 7600000 | OPEN : 09:00 ~ 18:00 CLOSE</p>
+                    <button>메뉴 보기</button>
+                </span>
+            </section>
+        </div>
+        <div id="cafe-contaienr">
+            <section>
+                <img src="public/images/plaza-3.png">
+                <span>
+                    <h1>오뜨 O:tt</h1>
+                    <p>서울 성북구 삼선교로16길 연구관 1층(상상파크 내)</p>
+                    <p>Tel : (02) 7600000 | OPEN : 09:00 ~ 18:00 CLOSE</p>
+                    <button>메뉴 보기</button>
+                </span>
+            </section>
+        </div>
+    </div>
+
+</body>
+
+</html>
