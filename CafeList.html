@@ -177,7 +177,7 @@
                     <h1>팥고당</h1>
                     <p>서울 성북구 삼선교로16길 상상관 2층(팥고당)</p>
                     <p>Tel : (02) 7600000 | OPEN : 08:00 ~ 20:00 CLOSE</p>
-                    <button>메뉴 보기</button>
+                    <button id="moveToCategory-btn">메뉴 보기</button>
                 </span>
             </section>
         </div>
@@ -221,6 +221,15 @@
 
             orderButton.addEventListener('click', function () {
                 const destinationURL = 'My-info.html';
+                window.location.href = destinationURL;
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const orderButton = document.getElementById('moveToCategory-btn');
+
+            orderButton.addEventListener('click', function () {
+                const destinationURL = 'category.html';
                 window.location.href = destinationURL;
             });
         });
