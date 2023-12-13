@@ -108,6 +108,7 @@
             cursor: pointer;
             width: fit-content;
             overflow: hidden; /* 버튼 내용이 너무 길 경우 오버플로우 방지 */
+            background-size: cover;
         }
 
         #add_btn, #buy_btn {
@@ -181,57 +182,57 @@
     <div id="menu-wrap">
         <div id="menu-container">
             <section>
-                <button onclick="goToDetail('Greentea Frappuccino')"><img src="public/images/plaza-1.png"></button>
+                <button onclick="goToDetail('Greentea Frappuccino')" style="background-image: url('public/images/grtf.jpg');"></button>
                     <span>
                         <h1>그린티 프라푸치노</h1>
                         <h3>Green Tea Frappuccino</h3>
                     </span>
                     <span>
                         <p>6,300 원</p>
-                        <button id="add_btn" onclick="addToCart('Greentea Frappuccino')">Add Cart</button>
-                        <button id="buy_btn" onclick="buyNow('Greentea Frappuccino')">Buy</button>
+                        <button id="add_btn" onclick="addToCart('그린티 프라푸치노')">Add Cart</button>
+                        <button id="buy_btn" onclick="buyNow('그린티 프라푸치노')">Buy</button>
                     </span>
             </section>
         </div>
         <div id="menu-container">
             <section>
-                <button onclick="goToDetail('Carmel Frappuccino')"><img src="public/images/plaza-2.png"></button>
+                <button onclick="goToDetail('Caramel Frappuccino')" style="background-image: url('public/images/crmf.jpg');"></button>
                 <span>
                     <h1>카라멜 프라푸치노</h1>
                     <h3>Caramel Frappuccino</h3>
                 </span>
                 <span>
                     <p>6,800 원</p>
-                    <button id="add_btn" onclick="addToCart('Caramel Frappuccino')">Add Cart</button>
-                    <button id="buy_btn" onclick="buyNow('Caramel Frappuccino')">Buy</button>
+                    <button id="add_btn" onclick="addToCart('카라멜 프라푸치노')">Add Cart</button>
+                    <button id="buy_btn" onclick="buyNow('카라멜 프라푸치노')">Buy</button>
                 </span>
             </section>
         </div>
         <div id="menu-container">
             <section>
-                <button onclick="goToDetail('Strawberry Cream Frappuccino')"><img src="public/images/plaza-3.png"></button>
+                <button onclick="goToDetail('Strawberry Cream Frappuccino')" style="background-image: url('public/images/scf.jpg');"></button>
                 <span>
                     <h1>딸기 크림 프라푸치노</h1>
                     <h3>Strawberry Cream Frappuccino</h3>
                 </span>
                 <span>
                     <p>5,800 원</p>
-                    <button id="add_btn" onclick="addToCart('Strawberry Cream Frappuccino')">Add Cart</button>
-                    <button id="buy_btn" onclick="buyNow('Strawberry Cream Frappuccino')">Buy</button>
+                    <button id="add_btn" onclick="addToCart('딸기 크림 프라푸치노')">Add Cart</button>
+                    <button id="buy_btn" onclick="buyNow('딸기 크림 프라푸치노')">Buy</button>
                 </span>
             </section>
         </div>
         <div id="menu-container">
             <section>
-                <button onclick="goToDetail('Caramel ribbon Crunch Frappuccino')"><img src="public/images/plaza-3.png"></button>
+                <button onclick="goToDetail('Strawberry Cream Frappuccino')" style="background-image: url('public/images/crmrcf.jpg');"></button>
                 <span>
                     <h1>카라멜 리본 크런치 프라푸치노</h1>
                     <h3>Caramel ribbon Crunch Frappuccino</h3>
                 </span>
                 <span>
                     <p>7,700 원</p>
-                    <button id="add_btn" onclick="addToCart('Caramel ribbon Crunch Frappuccino')">Add Cart</button>
-                    <button id="buy_btn" onclick="buyNow('Caramel ribbon Crunch Frappuccino')">Buy</button>
+                    <button id="add_btn" onclick="addToCart('카라멜 리본 크런치 프라푸치노')">Add Cart</button>
+                    <button id="buy_btn" onclick="buyNow('카라멜 리본 크런치 프라푸치노')">Buy</button>
                 </span>
             </section>
         </div>
@@ -284,14 +285,14 @@
         function addToCart(menuName) {
             alert(menuName + ' 가 장바구니에 추가되었습니다');
             const destinationURL = 'ShoppingCart.html';
-            window.location.href = destinationURL;
+       //     window.location.href = destinationURL;
             // 일단 그냥 알림 뜨고 장바구니로 화면만 넘어가게 해놓았습니다.
         }
 
        function buyNow(menuName) {
             alert('구매신청 ' + menuName);
             const destinationURL = 'My-info.html';
-            window.location.href = destinationURL;
+      //      window.location.href = destinationURL;
             // 일단 그냥 알림 뜨고 구매페이지? 로 화면만 넘어가게 해놓았습니다.
        }
     </script>
