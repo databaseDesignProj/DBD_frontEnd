@@ -107,6 +107,7 @@
             cursor: pointer;
             width: fit-content;
             overflow: hidden; /* 버튼 내용이 너무 길 경우 오버플로우 방지 */
+            background-size: cover;
         }
 
         section img {
@@ -171,7 +172,7 @@
     <div id="category-wrap">
         <div id="category-container">
             <section>
-                <button onclick="goToMenu('커피')"><img src="public/images/plaza-1.png"></button>
+                <button onclick="goToMenu('커피')" style="background-image: url('public/images/coffee.jpg');"></button>
                     <span>
                         <h1>커피</h1>
                     </span>
@@ -179,7 +180,7 @@
         </div>
         <div id="category-container">
             <section>
-                <button onclick="goToMenu('에이드')"><img src="public/images/plaza-2.png"></button>
+                <button onclick="goToMenu('에이드')" style="background-image: url('public/images/ade.jpg');"></button>
                     <span>
                         <h1>티 & 에이드</h1>
                     </span>
@@ -187,7 +188,7 @@
         </div>
         <div id="category-container">
             <section>
-                <button onclick="goToMenu('라떼')"><img src="public/images/plaza-3.png"></button>
+                <button onclick="goToMenu('라떼')" style="background-image: url('public/images/latte.jpg');"></button>
                     <span>
                         <h1>라떼</h1>
                     </span>
@@ -195,7 +196,7 @@
         </div>
         <div id="category-container">
             <section>
-                <button onclick="goToMenu('프라페')"><img src="public/images/plaza-3.png"></button>
+                <button onclick="goToMenu('프라페')" style="background-image: url('public/images/Frappe.jpg');"></button>
                     <span>
                         <h1>스무디 & 프라페</h1>
                     </span>
@@ -203,7 +204,7 @@
         </div>
         <div id="category-container">
             <section>
-                <button onclick="goToMenu('디카페인')"><img src="public/images/plaza-3.png"></button>
+                <button onclick="goToMenu('디카페인')" style="background-image: url('public/images/decaf.jpg');"></button>
                     <span>
                         <h1>디카페인</h1>
                     </span>
