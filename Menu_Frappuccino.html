@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <!--이미지 파일은 따로 추가 안했고 장바구니 추가 함수도 화면만 넘어가게 해놨습니다.-->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -100,25 +101,21 @@
         }
 
         section button {
-            background-color: #1E5092;
-            color: #fff;
-            padding: 8px 50px;
-            border: none;
-            border-radius: 50%; /* 버튼을 원 모양으로 만들기 */
             cursor: pointer;
-            width: fit-content;
-            overflow: hidden; /* 버튼 내용이 너무 길 경우 오버플로우 방지 */
             background-size: cover;
+            border: none;
+            background-color: #fff;
         }
 
-        #add_btn, #buy_btn {
-        background-color: #1E5092;
-        width: 100px;
-        color: #fff;
-        padding: 8px 15px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
+        #add_btn,
+        #buy_btn {
+            background-color: #1E5092;
+            width: 100px;
+            color: #fff;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
         }
 
         section img {
@@ -139,10 +136,11 @@
             margin-bottom: 10px;
             /* 단락간 간격 조절 */
         }
-        
+
         #menu-wrap {
             border-radius: 1.25rem;
-            background: #FEF9F3;;
+            background: #FEF9F3;
+            ;
             padding: 10px;
             width: 60%;
             margin-bottom: 20px;
@@ -155,8 +153,9 @@
         }
     </style>
 </head>
+
 <body>
-      <!--이것도 버튼 누르면 페이지만 바꾸게 구현해놨습니다. 실제로 데이터 넘어가는 로직은 아직 안했습니다. 이미지 파일들도 아직 따로 추가하지 않았습니다-->
+    <!--이것도 버튼 누르면 페이지만 바꾸게 구현해놨습니다. 실제로 데이터 넘어가는 로직은 아직 안했습니다. 이미지 파일들도 아직 따로 추가하지 않았습니다-->
     <header>
         <img src="public/images/logo2.png" alt="Your Cafe Logo" id="logo">
 
@@ -182,21 +181,23 @@
     <div id="menu-wrap">
         <div id="menu-container">
             <section>
-                <button onclick="goToDetail('Greentea Frappuccino')" style="background-image: url('public/images/grtf.jpg');"></button>
-                    <span>
-                        <h1>그린티 프라푸치노</h1>
-                        <h3>Green Tea Frappuccino</h3>
-                    </span>
-                    <span>
-                        <p>6,300 원</p>
-                        <button id="add_btn" onclick="addToCart('그린티 프라푸치노')">Add Cart</button>
-                        <button id="buy_btn" onclick="buyNow('그린티 프라푸치노')">Buy</button>
-                    </span>
+                <button onclick="goToDetail('Greentea Frappuccino')"><img src="/grtf.jpg  "
+                        style="width: 100px;"></button>
+                <span>
+                    <h1>그린티 프라푸치노</h1>
+                    <h3>Green Tea Frappuccino</h3>
+                </span>
+                <span>
+                    <p>6,300 원</p>
+                    <button id="add_btn" onclick="addToCart('그린티 프라푸치노')">Add Cart</button>
+                    <button id="buy_btn" onclick="buyNow('그린티 프라푸치노')">Buy</button>
+                </span>
             </section>
         </div>
         <div id="menu-container">
             <section>
-                <button onclick="goToDetail('Caramel Frappuccino')" style="background-image: url('public/images/crmf.jpg');"></button>
+                <button onclick="goToDetail('Caramel Frappuccino')"><img src="/crmf.jpg  "
+                    style="width: 110px;"></button>
                 <span>
                     <h1>카라멜 프라푸치노</h1>
                     <h3>Caramel Frappuccino</h3>
@@ -210,7 +211,8 @@
         </div>
         <div id="menu-container">
             <section>
-                <button onclick="goToDetail('Strawberry Cream Frappuccino')" style="background-image: url('public/images/scf.jpg');"></button>
+                <button onclick="goToDetail('Strawberry Cream Frappuccino')"><img src="/scf.jpg  "
+                    style="width: 100px;"></button>
                 <span>
                     <h1>딸기 크림 프라푸치노</h1>
                     <h3>Strawberry Cream Frappuccino</h3>
@@ -224,7 +226,8 @@
         </div>
         <div id="menu-container">
             <section>
-                <button onclick="goToDetail('Strawberry Cream Frappuccino')" style="background-image: url('public/images/crmrcf.jpg');"></button>
+                <button onclick="goToDetail('Strawberry Cream Frappuccino')"><img src="/crmrcf.jpg  "
+                    style="width: 100px;"></button>
                 <span>
                     <h1>카라멜 리본 크런치 프라푸치노</h1>
                     <h3>Caramel ribbon Crunch Frappuccino</h3>
@@ -239,7 +242,7 @@
     </div>
 
     <script>
-        
+
         document.addEventListener('DOMContentLoaded', function () {
             const orderButton = document.getElementById('cart-btn');
 
@@ -258,43 +261,43 @@
             });
         });
 
-    function goToDetail(MenuName) {
-        let destinationURL;
+        function goToDetail(MenuName) {
+            let destinationURL;
 
-    // 카테고리 값에 따라 다른 윈도우로 이동
-        switch (MenuName) {
-            case 'Greentea Frappuccino':
-                destinationURL = 'Menu_GreenF.html';
-                break;
-            case 'Carmel Frappuccino':
-                destinationURL = 'Menu_CarmelF.html';
-                break;
-            case 'Strawberry Cream Frappuccino':
-                destinationURL = 'Menu_StrawberryCF.html';
-                break;
-            case 'Caramel ribbon Crunch Frappuccino':
-                destinationURL = 'Menu_CaramelRCF.html';
-                break;
-        // Add more cases for other categories as needed
-            default:
-                break;
-    }
+            // 카테고리 값에 따라 다른 윈도우로 이동
+            switch (MenuName) {
+                case 'Greentea Frappuccino':
+                    destinationURL = 'Menu_GreenF.html';
+                    break;
+                case 'Carmel Frappuccino':
+                    destinationURL = 'Menu_Frappuccino.html';
+                    break;
+                case 'Strawberry Cream Frappuccino':
+                    destinationURL = 'Menu_StrawberryCF.html';
+                    break;
+                case 'Caramel ribbon Crunch Frappuccino':
+                    destinationURL = 'Menu_CaramelRCF.html';
+                    break;
+                // Add more cases for other categories as needed
+                default:
+                    break;
+            }
 
-    window.location.href = destinationURL;
-}
+            window.location.href = destinationURL;
+        }
         function addToCart(menuName) {
             alert(menuName + ' 가 장바구니에 추가되었습니다');
             const destinationURL = 'ShoppingCart.html';
-       //     window.location.href = destinationURL;
+            //     window.location.href = destinationURL;
             // 일단 그냥 알림 뜨고 장바구니로 화면만 넘어가게 해놓았습니다.
         }
 
-       function buyNow(menuName) {
+        function buyNow(menuName) {
             alert('구매신청 ' + menuName);
             const destinationURL = 'My-info.html';
-      //      window.location.href = destinationURL;
+            //      window.location.href = destinationURL;
             // 일단 그냥 알림 뜨고 구매페이지? 로 화면만 넘어가게 해놓았습니다.
-       }
+        }
     </script>
 
 </body>

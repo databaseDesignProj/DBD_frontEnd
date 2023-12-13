@@ -99,15 +99,9 @@
         }
 
         section button {
-            background-color: #1E5092;
-            color: #fff;
-            padding: 8px 50px;
-            border: none;
-            border-radius: 50%; /* 버튼을 원 모양으로 만들기 */
             cursor: pointer;
-            width: fit-content;
-            overflow: hidden; /* 버튼 내용이 너무 길 경우 오버플로우 방지 */
-            background-size: cover;
+            border: none;
+            background-color: #fff;
         }
 
         section img {
@@ -172,7 +166,7 @@
     <div id="category-wrap">
         <div id="category-container">
             <section>
-                <button onclick="goToMenu('커피')" style="background-image: url('public/images/coffee.jpg');"></button>
+                <button onclick="goToMenu('커피')"><img src="/coffee.jpg" style="width: 80px;"></button>
                     <span>
                         <h1>커피</h1>
                     </span>
@@ -180,7 +174,7 @@
         </div>
         <div id="category-container">
             <section>
-                <button onclick="goToMenu('에이드')" style="background-image: url('public/images/ade.jpg');"></button>
+                <button onclick="goToMenu('에이드')"><img src="/ade.jpg" style="width: 80px;"></button>
                     <span>
                         <h1>티 & 에이드</h1>
                     </span>
@@ -188,7 +182,7 @@
         </div>
         <div id="category-container">
             <section>
-                <button onclick="goToMenu('라떼')" style="background-image: url('public/images/latte.jpg');"></button>
+                <button onclick="goToMenu('라떼')"><img src="/latte.jpg" style="width: 80px;"></button>
                     <span>
                         <h1>라떼</h1>
                     </span>
@@ -196,7 +190,7 @@
         </div>
         <div id="category-container">
             <section>
-                <button onclick="goToMenu('프라페')" style="background-image: url('public/images/Frappe.jpg');"></button>
+                <button onclick="goToMenu('프라페')"><img src="/Frappe.jpg  " style="width: 80px;"></button>
                     <span>
                         <h1>스무디 & 프라페</h1>
                     </span>
@@ -204,7 +198,7 @@
         </div>
         <div id="category-container">
             <section>
-                <button onclick="goToMenu('디카페인')" style="background-image: url('public/images/decaf.jpg');"></button>
+                <button onclick="goToMenu('디카페인')"><img src="/decaf.jpg" style="width: 80px"></button>
                     <span>
                         <h1>디카페인</h1>
                     </span>
